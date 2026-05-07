@@ -33,7 +33,7 @@ const Sidebar = () => {
           <h1>Create your first playlist</h1>
           <p className="font-light">It's easy, we'll help you</p>
           <button className="bg-white text-[15px] text-black rounded-full px-4 py-1 font-bold mt-4">
-            <a href="http://localhost:5173/add-album">Create Playlist</a>
+            <a href="https://iamgroove-1.onrender.com/api/album/add">Create Playlist</a>
           </button>
         </div>
         <div className="p-4 bg-[#242424] m-2 rounded font-semibold flex flex-col items-start justify-start gap-1 pl-4">
