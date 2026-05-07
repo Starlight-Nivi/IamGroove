@@ -23,7 +23,7 @@ const AddSong = () => {
       formData.append("audio", song);
 
       const response = await axios.post(
-        "http://localhost:4000/api/song/add",
+        "https://iamgroove-1.onrender.com/api/song/add",
         formData,
       );
       if (response.data.success) {
