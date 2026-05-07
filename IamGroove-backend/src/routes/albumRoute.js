@@ -3,7 +3,7 @@ import {
   addAlbum,
   listAlbum,
   removeAlbum,
-} from "../controllers/AlbumController.js";
+} from "../controllers/albumController.js";
 import upload from "../middleware/multer.js";
 const albumRouter = express.Router();
 import dotenv from "dotenv";
