@@ -43,7 +43,7 @@ const AddSong = () => {
   };
   const loadAlbumsData = async () => {
     try {
-      const response = await axios.get("http://localhost:4000/api/album/list");
+      const response = await axios.get("https://iamgroove-2.onrender.com/api/album/list");
       if (response.data.success) {
         setAlbumData(response.data.albums);
       } else {
