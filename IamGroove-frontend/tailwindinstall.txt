@@ -1,0 +1,71 @@
+✅ Fix (clean and correct setup)
+1. Remove conflicting packages
+
+Run this:
+
+npm uninstall tailwindcss @tailwindcss/postcss @tailwindcss/vite
+
+2. Install stable Tailwind (recommended: v3)
+npm install -D tailwindcss@3 postcss autoprefixer
+
+3. Recreate config files
+npx tailwindcss init -p
+
+This creates:
+
+tailwind.config.js
+postcss.config.js
+
+4. Update tailwind.config.js
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+};
+
+5. Fix index.css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+6. Ensure CSS is imported
+
+In main.jsx:
+
+import "./index.css";
+7. Clean reinstall (important)
+
+PowerShell:
+
+Remove-Item -Recurse -Force node_modules
+npm install
+8. Start again
+npm run dev
+🧪 Test again
+<div className="bg-red-500 text-white text-5xl p-10">
+  Tailwind Working
+</div>
+🔥 Why this fixes it
+Tailwind v3 → stable + simple PostCSS setup
+Removes conflicting v4 plugin system
+Eliminates "use strict" parsing error
+✅ FIX (DO THIS EXACTLY)
+1. Fix postcss.config.js
+
+Open:
+
+postcss.config.js
+
+Replace EVERYTHING with:
+
+export default {
+  plugins: {
+    tailwindcss: {},
+    autoprefixer: {},
+  },
+};
