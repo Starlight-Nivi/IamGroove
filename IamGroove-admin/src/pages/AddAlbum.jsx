@@ -19,7 +19,7 @@ const AddAlbum = () => {
       formData.append("bgColour", color);
       formData.append("image", image);
       const response = await axios.post(
-        "http://localhost:4000/api/album/add",
+        "https://iamgroove-1.onrender.com/api/album/add",
         formData,
       );
       if (response.data.success) {
