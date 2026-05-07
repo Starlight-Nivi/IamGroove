@@ -19,7 +19,7 @@ const ListSong = () => {
   const removeSong = async (id) => {
     try {
       const response = await axios.post(
-        "http://localhost:4000/api/song/remove",
+        "https://iamgroove-1.onrender.com/api/song/remove",
         { id },
       );
       if (response.data.success) {
