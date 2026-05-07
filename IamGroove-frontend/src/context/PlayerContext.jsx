@@ -6,7 +6,7 @@ const PlayerContextProvider = (props) => {
   const audioRef = useRef();
   const seekBg = useRef();
   const seekBar = useRef();
-  const url = "http://localhost:4000";
+  const url = "https://iamgroove-1.onrender.com";
   const [songsData, setSongsData] = useState([]);
   const [albumsData, setAlbumsData] = useState([]);
   const [track, setTrack] = useState(songsData[0]);
