@@ -7,7 +7,7 @@ const ListAlbum = () => {
   const [data, setData] = useState([]);
   const fetchAlbums = async () => {
     try {
-      const response = await axios.get("http://localhost:4000/api/album/list");
+      const response = await axios.get("https://iamgroove-1.onrender.com/api/album/list");
       if (response.data.success) {
         setData(response.data.albums);
       }
