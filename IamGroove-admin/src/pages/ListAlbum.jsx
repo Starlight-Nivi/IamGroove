@@ -18,7 +18,7 @@ const ListAlbum = () => {
   const removeAlbum = async (id) => {
     try {
       const response = await axios.post(
-        "http://localhost:4000/api/album/remove",
+        "https://iamgroove-1.onrender.com/api/album/remove",
         { id },
       );
       if (response.data.success) {
