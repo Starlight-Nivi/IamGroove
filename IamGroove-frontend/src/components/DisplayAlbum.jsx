@@ -21,7 +21,7 @@ const DisplayAlbum = ({ album }) => {
       <Navbar />
       <div className="flex gap-8 flex-col items-end md:flex-row md:items-end mt-10">
         <img
-          className="w-48 rounded"
+          className="w-48 h-48 md:w-60 md:h-60 object-cover rounded-lg shadow-lg"
           src={albumData.image}
           alt={albumData.name}
         />
@@ -61,7 +61,7 @@ const DisplayAlbum = ({ album }) => {
           >
             <p className="text-white">
               <b className="mr-4 text-[#a7a7a7]">{index + 1}</b>
-              <img className="inline w-10 mr-5" src={item.image} alt="" />
+              <img className="inline w-10 mr-5 h-10 object-cover rounded" src={item.image} alt="" />
               {item.name}
             </p>
             <p className="text-[15px]">{albumData.name}</p>
